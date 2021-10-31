@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Pokedex from 'pokedex-promise-v2';
+
+const P = new Pokedex();
+
+console.log(P);
+
+P.getPokemonsList() 
+    .then(function(response) {
+      console.log(response);
+    })
+    .catch(function(error) {
+      console.log('There was an ERROR: ', error);
+    });
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        
+      </ul>
     </div>
   );
 }
