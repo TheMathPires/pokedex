@@ -25,8 +25,8 @@ function App() {
   return (
     <div className="App">
       <ul>
-        {pokemonNames.map(name => (
-          <li>{name}</li>
+        {pokemonNames.map((name, index) => (
+          <li key={index}>{name}</li>
         ))}
       </ul>
     </div>
