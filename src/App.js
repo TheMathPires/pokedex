@@ -4,7 +4,7 @@ import Pokedex from 'pokedex-promise-v2';
 
 const pokedex = new Pokedex();
 const interval = {
-  limit: 100,
+  limit: 10,
   offset: 0
 }
 
@@ -26,7 +26,9 @@ function App() {
     <div className="App">
       <ul>
         {pokemonNames.map((name, index) => (
-          <li key={index}>{name}</li>
+          <li key={index}>
+            {name}
+          </li>
         ))}
       </ul>
     </div>
